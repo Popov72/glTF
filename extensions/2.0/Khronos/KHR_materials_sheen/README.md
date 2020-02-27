@@ -132,7 +132,7 @@ If you want to trade a bit of accuracy for more performance, you can use the `Vd
 albedoScaling = 1.0 - sheenIntensity * max3(sheenColor) * E(VdotN)
 ```
 
-In this simplified form, it can be used for both direct and indirect lights:
+In this simplified form, it can be used to scale the base layer for both direct and indirect lights:
 ```glsl
 specular_direct *= albedoScaling;
 diffuse_direct *= albedoScaling;
