@@ -117,20 +117,20 @@ sheenVisibility = 1 / (4 * (NdotL + NdotV - NdotL * NdotV))
 
 The sheen layer can be combined with the base layer with an albedo-scaling technique described in Estevez and Kulla:
 
-<blockquote>
+```glsl
 float max3(vec3 v) { return max(max(v.x, v.y), v.z); }
 
 albedoScaling = min(1.0 - sheenIntensity * max3(sheenColor) * E(VdotN), 1.0 - sheenIntensity * max3(sheenColor) * E(LdotN))
 
-f = f<sub>sheen</sub> + f<sub>base</sub> * albedoScaling
-</blockquote>
+f = f_sheen + f_base * albedoScaling
+```
 
 The values `E(x)` can be looked up in a table which can be found in section 6.2.3 of [Enterprise PBR Shading Model](#theory-documentation-and-implementations) if you use the "Charlie" visibility term. If you use Ashikhmin instead, you can get the lookup table by using the [cmgen tool from Filament](#theory-documentation-and-implementations), with the `--ibl-dfg` and `--ibl-dfg-cloth` flags: the table is in the blue channel of the generated picture. The lookup must be done with `x = VdotN` and `y = sheenRoughness`.
 
 If you want to trade a bit of accuracy for more performance, you can use the `VdotN` term only and thus avoid doing multiple lookups for `LdotN`. The albedo scaling term is simplified to:
-<blockquote>
+```glsl
 albedoScaling = 1.0 - sheenIntensity * max3(sheenColor) * E(VdotN)
-</blockquote>
+```
 
 In this simplified form, it can be used for both direct and indirect lights:
 ```glsl
