@@ -164,9 +164,15 @@ f = f_emissive + f_diffuse + f_specular
 ### Theory, Documentation and Implementations
 
 [Filament Material models - Cloth model](https://google.github.io/filament/Materials.md.html#materialmodels/clothmodel)
+
 [cmgen tool from Filament](https://github.com/google/filament)
+
 [NP13 David Neubelt, Matt Pettineo – “Crafting a Next-Gen Material Pipeline for The Order: 1886”, SIGGRAPH 2013](https://blog.selfshadow.com/publications/s2013-shading-course/rad/s2013_pbs_rad_notes.pdf)
+
 [EK17 Alejandro Conty Estevez, Christopher Kulla – “Production Friendly Microfacet Sheen BRDF”, SIGGRAPH 2017](https://blog.selfshadow.com/publications/s2017-shading-course/imageworks/s2017_pbs_imageworks_sheen.pdf)
+
 [AS07 Michael Ashikhmin, Simon Premoze – “Distribution-based BRDFs”, 2007](http://www.cs.utah.edu/~premoze/dbrdf/dBRDF.pdf)
+
 [cloth-shading](https://knarkowicz.wordpress.com/2018/01/04/cloth-shading/)
+
 [Enterprise PBR Shading Model - Sheen](https://dassaultsystemes-technology.github.io/EnterprisePBRShadingModel/spec-2021x.md.html#components/sheen)
