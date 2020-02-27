@@ -51,7 +51,7 @@ All implementations should use the same calculations for the BRDF inputs. Implem
 |                                  | Type                                                                            | Description                            | Required                       |
 |----------------------------------|---------------------------------------------------------------------------------|----------------------------------------|--------------------------------|
 |**intensityFactor**               | `number`                                                                        | The sheen intensity.                   | No, default: `1.0`             |
-|**colorFactor**                   | `array`                                                                         | The sheen color.                       | No, default: `[1.0, 1.0, 1.0]` |
+|**colorFactor**                   | `array`                                                                         | The sheen color in linear space        | No, default: `[1.0, 1.0, 1.0]` |
 |**colorIntensityTexture**         | [`textureInfo`](/specification/2.0/README.md#reference-textureInfo)             | The sheen color (RGB) and intensity (Alpha) texture.<br> The sheen color is in sRGB transfer function | No               |
 |**roughnessFactor**               | `number`                                                                        | The sheen roughness.                   | No, default: `0.0`             |
 
